@@ -24,7 +24,7 @@ const SideBar = ({ currentPath: page, handlePageChange }) => {
         }}
       >
         <img src={logo} alt="Logo" className="w-9 h-9 hover:cursor-pointer" />
-        <h1 className="font-bold text-2xl text-bank-navy font-montserrat hover:cursor-pointer">
+        <h1 className="font-bold text-xl text-bank-navy font-montserrat hover:cursor-pointer">
           BankDash.
         </h1>
       </div>

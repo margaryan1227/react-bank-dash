@@ -43,7 +43,7 @@ const App = () => {
       <div className="flex-1 flex flex-col">
         <Header title={getTitle()} />
 
-        <main className="p-8 bg-gray-50 flex-1">
+        <main className="bg-gray-50 flex-1">
           {/* Simple Switch Logic */}
           {activePage === 'dashboard' && <Dashboard />}
           {activePage === 'transactions' && <Transactions />}
