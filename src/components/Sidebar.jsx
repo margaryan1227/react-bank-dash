@@ -1,4 +1,5 @@
-  import logo from '../assets/logo.png';
+import logo from '../assets/logo.png';
+import { formatSidebarLabel } from '../utils/formatSidebarLabal.js';
 import SidebarItem from "./SideBarItem.jsx";
 
 const SideBar = ({
@@ -13,16 +14,15 @@ const SideBar = ({
     {icon: 'creditCards', label: 'Credit Cards', id: '5'},
     {icon: 'loans', label: 'Loans', id: '6'},
     {icon: 'services', label: 'Services', id: '7'},
-    {icon: 'privileges', label: 'Privileges', id: '8'},
-    {icon: 'settings', label: 'Settings', id: '9'},
+    {icon: 'settings', label: 'Settings', id: '8'},
   ];
 
   return (
     <aside className="w-64 h-screen bg-white border-r border-gray-100 flex flex-col">
       {/* Logo Section */}
-      <div className="p-8 flex items-center gap-3">
-        <img src={logo} alt="Logo" className="w-9 h-9" />
-        <h1 className="font-bold text-2xl text-bank-navy font-montserrat">BankDash.</h1>
+      <div className="p-8 flex items-center gap-3" onClick={() => { handlePageChange('dashboard') }}>
+        <img src={logo} alt="Logo" className="w-9 h-9 hover:cursor-pointer" />
+        <h1 className="font-bold text-2xl text-bank-navy font-montserrat hover:cursor-pointer">BankDash.</h1>
       </div>
 
       {/* Nav Links */}
@@ -31,7 +31,7 @@ const SideBar = ({
           <SidebarItem
             key={item.id}
             item={item}
-            isActive={page === item.label.toLowerCase()}
+            isActive={page === formatSidebarLabel(item.label)}
             handlePageChange={handlePageChange}
           />
         ))}

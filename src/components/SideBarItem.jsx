@@ -7,6 +7,7 @@ import Loans from '../assets/sidebar-icons/Loans.svg?react';
 import Services from '../assets/sidebar-icons/Services.svg?react';
 import Privileges from '../assets/sidebar-icons/Privileges.svg?react';
 import Settings from '../assets/sidebar-icons/Settings.svg?react';
+import { formatSidebarLabel } from '../utils/formatSidebarLabal';
 
 const ICON_MAP = {
   dashboard: Dashboard,
@@ -28,7 +29,7 @@ const SidebarItem = ({ item, isActive, handlePageChange }) => {
   return (
     <div
       key={item.id}
-      onClick={() => handlePageChange(item.label.toLowerCase().replace(/\s+/g, '-'))}
+      onClick={() => handlePageChange(formatSidebarLabel(item.label))}
       className={`flex items-center gap-4 px-8 py-4 cursor-pointer relative transition-all
       ${isActive
         ? 'text-bank-blue font-semibold'
