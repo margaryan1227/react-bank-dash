@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* This creates the font utility in Tailwind v4 */
+  --font-montserrat: "Montserrat", sans-serif;
+    
+  /* Adding your BankDash colors here too so they work properly */
+  --color-bank-navy: #343C6A;
+  --color-bank-blue: #2D60FF;
+  --color-bank-gray-light: #F5F7FA;
+}
+
+@utility header-item {
+@apply rounded-full bg-bank-gray-light p-3 flex items-center justify-center 
+         hover:bg-gray-200 transition-colors cursor-pointer w-12 h-12;
+}
