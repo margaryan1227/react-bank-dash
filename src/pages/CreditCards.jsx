@@ -1,6 +1,4 @@
-import Header from "../components/Header";
-
-const CreditCards = ({}) => {
+const CreditCards = () => {
   return (
     <div className="min-h-screen w-full bg-gray-50">
     </div>

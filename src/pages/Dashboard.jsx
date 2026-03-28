@@ -1,6 +1,4 @@
-import Header from "../components/Header";
-
-const Dashboard = ({}) => {
+const Dashboard = () => {
   return (
     <div className="min-h-screen w-full bg-gray-50">
     </div>

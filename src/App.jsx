@@ -11,12 +11,9 @@ import Settings from "./pages/Settings";
 import { useState, useEffect } from "react";
 
 const App = () => {
-  const [activePage, setActivePage] = useState('dashboard');
-
-  useEffect(() => {
-    const path = window.location.pathname.substring(1) || activePage;
-    setActivePage(path);
-  }, []);
+  const [activePage, setActivePage] = useState(() => {
+    return window.location.pathname.substring(1) || 'dashboard';
+  });
 
   const handlePageChange = (page) => {
     setActivePage(page);
@@ -25,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      const path = window.location.pathname.substring(1) || activePage;
+      const path = window.location.pathname.substring(1) || 'dashboard';
       setActivePage(path);
     };
 
@@ -47,7 +44,7 @@ const App = () => {
         {activePage === 'transactions' && <Transactions />}
         {activePage === 'accounts' && <Accounts />}
         {activePage === 'investments' && <Investments />}
-        {activePage === 'creditCards' && <CreditCards />}
+        {activePage === 'credit-cards' && <CreditCards />}
         {activePage === 'loans' && <Loans />}
         {activePage === 'services' && <Services />}
         {activePage === 'settings' && <Settings />}
