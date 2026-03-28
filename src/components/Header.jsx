@@ -3,7 +3,7 @@ import SettingIcon from './SettingIcon';
 import NotificationsIcon from './NotificationsIcon';
 import SearchBar from './SearchBar';
 
-const Header = ({title}) => {
+const Header = ({ title }) => {
   return (
     <div className="flex items-center gap-10 w-full p-6 bg-white border-b border-gray-200">
       <div className="ml-4">
@@ -11,12 +11,12 @@ const Header = ({title}) => {
       </div>
 
       <div className="ml-auto flex items-center gap-4">
-        <SearchBar/>
+        <SearchBar />
 
-        <SettingIcon/>
-        <NotificationsIcon/>
+        <SettingIcon />
+        <NotificationsIcon />
 
-        <img src={avatar} alt="User Avatar" className='rounded-full h-12'/>
+        <img src={avatar} alt="User Avatar" className="rounded-full h-12" />
       </div>
     </div>
   );

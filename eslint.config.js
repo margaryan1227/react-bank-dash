@@ -3,6 +3,7 @@ import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import prettierPlugin from 'eslint-plugin-prettier';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
@@ -17,24 +18,28 @@ export default [
         sourceType: 'module',
       },
     },
-    // Set the React version automatically
     settings: { react: { version: '18.3' } },
     plugins: {
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      prettier: prettierPlugin, // Ensure this matches the rule name below
     },
     rules: {
       ...js.configs.recommended.rules,
       ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules, // Use this for React 17+ (no 'import React' needed)
+      ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
-
-      // Personalize these for your style
-      'react/prop-types': 'off', // We don't need these in modern dev
+      'react/prop-types': 'off',
       'no-unused-vars': 'warn',
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+
+      // This is what shows Prettier issues as red underlines:
+      'prettier/prettier': 'error',
     },
   },
-    eslintConfigPrettier,
+  eslintConfigPrettier, // Mutes ESLint formatting rules so they don't fight
 ];

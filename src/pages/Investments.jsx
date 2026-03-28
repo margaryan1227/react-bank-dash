@@ -1,8 +1,5 @@
 const Investments = () => {
-  return (
-    <div className="min-h-screen w-full bg-gray-50">
-    </div>
-  );
+  return <div className="min-h-screen w-full bg-gray-50"></div>;
 };
 
 export default Investments;

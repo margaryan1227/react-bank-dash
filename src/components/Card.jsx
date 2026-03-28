@@ -1,10 +1,10 @@
 const Card = () => {
-    return (
-        <div>
-            {/* Card content goes here */}
-            Card Component
-        </div>
-    );
+  return (
+    <div>
+      {/* Card content goes here */}
+      Card Component
+    </div>
+  );
 };
 
 export default Card;

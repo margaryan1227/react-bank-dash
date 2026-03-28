@@ -31,21 +31,22 @@ const SidebarItem = ({ item, isActive, handlePageChange }) => {
       key={item.id}
       onClick={() => handlePageChange(formatSidebarLabel(item.label))}
       className={`flex items-center gap-4 px-8 py-4 cursor-pointer relative transition-all
-      ${isActive
-        ? 'text-bank-blue font-semibold'
-        : 'text-[#B1B1B1] hover:text-bank-blue'}`}
+      ${
+        isActive
+          ? 'text-bank-blue font-semibold'
+          : 'text-[#B1B1B1] hover:text-bank-blue'
+      }`}
     >
       {/* The Blue Indicator Bar for Active State */}
       {isActive && (
-        <div className="absolute left-0 w-1.5 h-full bg-bank-blue rounded-r-lg"/>
+        <div className="absolute left-0 w-1.5 h-full bg-bank-blue rounded-r-lg" />
       )}
 
-      
-    <IconComponent
-      className={`w-6 h-6 transition-colors ${
-        isActive ? 'text-bank-blue' : 'text-[#B1B1B1]'
-      }`}
-    />
+      <IconComponent
+        className={`w-6 h-6 transition-colors ${
+          isActive ? 'text-bank-blue' : 'text-[#B1B1B1]'
+        }`}
+      />
       <span className="font-montserrat">{item.label}</span>
     </div>
   );
