@@ -10,8 +10,8 @@ const MyCards = ({ cards }) => {
         </h2>
       </div>
       <div className="flex justify-around space-x-4">
-        {cards.map((cardInfo) => (
-          <Card key={cardInfo.id} {...cardInfo} />
+        {cards.map((cardInfo, index) => (
+          <Card key={cardInfo.id} {...cardInfo} applyHidden={index > 1} />
         ))}
       </div>
     </div>
