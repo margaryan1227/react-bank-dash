@@ -8,7 +8,6 @@ const Card = ({
   expiryDate = '12/97',
   balance = 10000,
   type = 'mastercard',
-  styles,
   applyHidden,
 }) => {
   const cardStyles = applyHidden

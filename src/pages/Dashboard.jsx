@@ -1,4 +1,5 @@
 import MyCards from '../components/MyCards';
+import RecentTransactions from '../components/RecentTransactions';
 
 const Dashboard = () => {
   return (
@@ -15,7 +16,7 @@ const Dashboard = () => {
           { id: 3, title: 'Card 3', description: 'This is card 3' },
         ]}
       />
-      <div className="mt-6 max-w-4xl h-1/3 bg-white rounded-lg shadow p-6"></div>
+      <RecentTransactions />
       <div className="mt-6 max-w-4xl h-1/3 bg-white rounded-lg shadow p-6"></div>
     </div>
   );

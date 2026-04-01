@@ -2,7 +2,7 @@ import Card from './Card';
 
 const MyCards = ({ cards }) => {
   return (
-    <div className="col-span-2 max-w-4xl space-y-2">
+    <div className="col-span-2 space-y-2">
       <div className="flex items-end justify-between text-bank-navy px-5">
         <h2 className="text-2xl font-bold">My Cards</h2>
         <h2 className="text-1xl hover:underline hover:cursor-pointer">
